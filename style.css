@@ -1,25 +1,26 @@
   :root {
     font-size: 1rem;
     --txt: #FFF;
-    --bg: #000;
+    --txt-contrast: #000;
+    --bg: #43282A;
+    --bg-dark: #211012;
+    --bg-light: #5B4344;
     --primary: #FFD700;
-  }
-  html {
-    margin: 0rem;
-    padding: 0rem;
   }
   body {
     font-size: 120%;
+    color: var(--txt);
     background: var(--bg);
+    margin: 0rem;
+    padding: 0rem;
   }
-
   .header {
     width: 30%;
     margin: 3.125rem auto 0rem;
     color: var(--txt);
-    background: var(--bg);
+    background: var(--bg-dark);
     text-align: center;
-    border: 0.0625rem solid var(--bg);
+    border: 0.0625rem solid var(--bg-light);
     border-bottom: none;
     border-radius: 0.625rem 0.625rem 0rem 0rem;
     padding: 1.25rem;
@@ -28,8 +29,8 @@
     width: 30%;
     margin: 0rem auto;
     padding: 1.25rem;
-    border: 0.0625rem solid var(--bg);
-    background: var(--bg);
+    border: 0.0625rem solid var(--bg-light);
+    background: var(--bg-dark);
     border-radius: 0rem 0rem 0.625rem 0.625rem;
   }
   .input-group {
@@ -45,13 +46,13 @@
     width: 93%;
     padding: 0.3125rem 0.625rem;
     border-radius: 0.3125rem;
-    border: 0.0625rem solid var(--bg);
+    border: 0.0625rem solid var(--bg-light);
   }
   .btn {
     padding: 0.625rem;
     font-size: 0.9375rem;
     color: var(--txt);
-    background: var(--primary);
+    background: var(--bg);
     border: none;
     border-radius: 0.3125rem;
   }
