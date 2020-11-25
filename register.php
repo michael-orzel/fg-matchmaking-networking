@@ -28,12 +28,14 @@
   	  <label>Confirm password</label>
   	  <input type="password" name="password_2">
   	</div>
-  	<div class="input-group">
+  	<div class="input-group center">
   	  <button type="submit" class="btn" name="reg_user">Register</button>
   	</div>
-  	<p>
-  		Already a member? <a href="login.php">Login</a>
-  	</p>
+  	<div class="subtext">
+		<span>
+			Already registered? <a href="login.php" class="login">Login</a>
+		</span>
+	</div>
   </form>
 </body>
 </html>

@@ -5,7 +5,9 @@
     --bg: #43282A;
     --bg-dark: #211012;
     --bg-light: #5B4344;
-    --primary: #FFD700;
+    --primary: #DBC33C;
+    --primary-dark: #B4A032;
+    --secondary: #FF7A7A;
   }
   body {
     font-size: 120%;
@@ -48,27 +50,52 @@
     border-radius: 0.3125rem;
     border: 0.0625rem solid var(--bg-light);
   }
+  .center {
+    text-align: center;
+  }
   .btn {
-    padding: 0.625rem;
     font-size: 0.9375rem;
-    color: var(--txt);
-    background: var(--bg);
+    color: var(--txt-contrast);
+    background: var(--primary);
+    padding: 1.25rem;
+    margin: 0.9375rem;
+    width: 60%;
     border: none;
-    border-radius: 0.3125rem;
+    border-radius: 0.625rem;
+  }
+  .btn:hover {
+    color: var(--txt-contrast);
+    background: var(--primary-dark);
+    cursor: pointer;
+  }
+  .btn:focus {
+    color: var(--txt-contrast);
+    background: var(--txt);
+  }
+  .subtext {
+    font-size: 0.9375rem;
+  }
+  .login {
+    color: var(--secondary);
+    text-decoration: none;
+  }
+  .login:hover {
+    color: var(--txt);
+    text-decoration: underline;
   }
   .error {
     width: 92%; 
     margin: 0rem auto; 
     padding: 0.625rem; 
-    border: 0.0625rem solid #a94442; 
-    color: #a94442; 
-    background: #f2dede; 
+    border: 0.0625rem solid var(--bg-light); 
+    color: var(--txt); 
+    background: var(--bg); 
     border-radius: 0.3125rem; 
     text-align: left;
   }
   .success {
     color: var(--primary); 
     background: var(--bg); 
-    border: 0.0625rem solid var(--primary);
+    border: 0.0625rem solid var(--bg-light);
     margin-bottom: 1.25rem;
   }
