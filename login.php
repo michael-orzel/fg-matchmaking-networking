@@ -20,12 +20,14 @@
   		<label>Password</label>
   		<input type="password" name="password">
   	</div>
-  	<div class="input-group">
+  	<div class="input-group center">
   		<button type="submit" class="btn" name="login_user">Login</button>
   	</div>
-  	<p>
-  		Not yet a member? <a href="register.php">Sign up</a>
-  	</p>
+  	<div class="subtext">
+		<span>
+			Need an account? <a href="register.php" class="login">Register</a>
+		</span>
+	</div>
   </form>
 </body>
 </html>
