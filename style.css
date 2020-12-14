@@ -137,12 +137,8 @@ form, .content {
 
 #name-area {
   font: bold 0.75rem "Lucida Grande", Sans-Serif;
-  color: #FFF;
-  position: absolute;
-  top: 0.75rem;
-  right: 0;
-  text-align: right;
 }   
 #name-area span {
+  font-size: 2rem;
   color: #FFF;
 }

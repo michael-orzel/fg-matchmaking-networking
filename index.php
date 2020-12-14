@@ -64,7 +64,7 @@
 			<a href="index.php?logout='1'" class="login">logout</a>
 		</span>
     <?php endif ?>
-</div>
+</div> <!-- End div .content -->
 </body>
 
 </html>
