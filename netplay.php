@@ -1,3 +1,17 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -10,6 +24,7 @@
   <script type="text/javascript" src="chat.js"></script>
 
   <script type="text/javascript">
+  /*
     // Ask user for name with popup prompt    
     var name = prompt("Enter your chat name:", "Guest");
     
@@ -23,7 +38,8 @@
   
     // Display name on page
     $("#name-area").html("You are: <span>" + name + "</span>");
-  
+  */
+
     // Kick off chat
     var chat =  new Chat();
     $(function() {
@@ -56,7 +72,7 @@
                  
           // Send 
           if (length <= maxLength + 1) {        
-            chat.send(text, name);	
+            chat.send(text, name); // SESSION['USERNAME']!!!!!!
             $(this).val("");
           } 
           else {
@@ -73,11 +89,12 @@
   <div id="page-wrap">
     <h2>jQuery/PHP Chat</h2>
     
-    <p id="name-area"></p>
-    
     <div id="chat-wrap"><div id="chat-area"></div></div>
     
     <form id="send-message-area">
+      <?php if(isset($_SESSION['username'])) : ?>
+    	  <p id="name-area">User: <strong><?php echo $_SESSION['username']; ?></strong></p>
+      <?php endif ?>
       <p>Your message: </p>
       <textarea id="sendie" maxlength = '100'></textarea>
     </form>
